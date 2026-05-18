@@ -1,0 +1,226 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 16px clamp(24px, 16.25%, 312px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.banner-wrapper {
+  height: 800px;
+  width: 100%;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner-content {
+  padding: 16px clamp(24px, 10.4%, 200px);
+}
+
+.banner-content h1 {
+  font-size: 64px;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 5%;
+  margin-bottom: 16px;
+}
+
+.banner-content p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 5%;
+}
+
+.banner-content a {
+  height: 48px;
+  width: 115px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #C0FA73;
+  color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.new-arrival {
+  padding: 64px clamp(24px, 16.25%, 312px);
+}
+
+.new-arrival-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-arrival-title h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 12px;
+}
+
+.new-arrival-title h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #212529;
+}
+
+.new-arrival-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.new-arrival-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.new-arrival-item a {
+  text-decoration: none;
+}
+
+.new-arrival-item img {
+  max-height: 636px;
+  max-width: 636px;
+  width: 100%;
+}
+
+.new-arrival-item h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 4px;
+}
+
+.new-arrival-item p {
+  font-size: 16px;
+  color: #212529;
+}
+
+.best-seller-list {
+  padding: 64px clamp(24px, 16.25%, 312px);
+}
+
+.best-seller-list h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 16px;
+}
+
+.best-seller-list ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.best-seller-list li {
+  position: relative;
+  display: inline-block;
+}
+
+.best-seller-note {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #F5FEE7;
+  color: #57A203;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.best-seller-list img {
+  max-width: 422px;
+  width: 100%;
+}/*# sourceMappingURL=all.css.map */
