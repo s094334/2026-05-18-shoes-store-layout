@@ -2,7 +2,7 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 }
-.nav-web {
+header .nav-web {
     padding: 16px clamp(24px, 16.25%, 312px);
     display: flex;
     justify-content: space-between;
@@ -10,13 +10,13 @@
 		padding: 12px;
     }
 }
-.nav-wrapper {
+header .nav-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 48px;
 }
-.nav-list {
+header .nav-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +25,11 @@
 		display: none;
     }
 }
-.nav-list a {
+header .nav-list a {
     text-decoration: none;
     color: #212529;
 }
-.nav-mobile {
+header .nav-mobile {
     display: none;
     @include pad {
 		display: flex;
@@ -37,7 +37,7 @@
         align-items: center;
     }
 }
-.nav-list-mobile {
+header .nav-list-mobile {
     display: none;
     @include pad {
 		display: flex;
@@ -45,12 +45,12 @@
         height: 48px;
     }
 }
-.nav-list-mobile li {
+header .nav-list-mobile li {
     flex: 1;
     height: 100%;
 }
-.nav-list-mobile .products-mobile,
-.nav-list-mobile .brand-story-mobile {
+header .nav-list-mobile .products-mobile,
+header .nav-list-mobile .brand-story-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,10 +60,10 @@
     color: #212529;
 }
 
-.nav-list-mobile .products-mobile {
+header .nav-list-mobile .products-mobile {
     background-color: #E8FEC5;
 }
 
-.nav-list-mobile .brand-story-mobile {
+header .nav-list-mobile .brand-story-mobile {
     background-color: #F5FEE7;
 }
