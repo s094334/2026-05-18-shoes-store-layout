@@ -223,4 +223,101 @@ header {
 .best-seller-list img {
   max-width: 422px;
   width: 100%;
+}
+
+.sale-wrapper {
+  max-height: 470px;
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sale-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.sale-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.sale-title h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 5%;
+}
+
+.sale-title span {
+  font-size: 40px;
+  font-weight: bold;
+  color: #C0FA73;
+}
+
+.sale-content h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 5%;
+  margin-top: 16px;
+}
+
+.sale-content p {
+  font-size: 20px;
+  color: #ADB5BD;
+  margin-top: 32px;
+}
+
+.sale-content a {
+  height: 48px;
+  width: 115px;
+  text-decoration: none;
+  background-color: #C0FA73;
+  color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin-top: 48px;
+  font-size: 16px;
+}
+
+/* .sale-content .star {
+    position: absolute;
+    top: -56px;
+    left: -24px;
+} */
+.sale-wrapper .dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.sale-wrapper .dots li {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #CED4DA;
+}
+
+.sale-wrapper .dots li.active {
+  background-color: #6C757D;
+  width: 24px;
+  border-radius: 4px;
 }/*# sourceMappingURL=all.css.map */
