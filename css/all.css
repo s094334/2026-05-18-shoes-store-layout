@@ -52,10 +52,15 @@ table {
   box-sizing: border-box;
 }
 
-header {
+.nav-web {
   padding: 16px clamp(24px, 16.25%, 312px);
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .nav-web {
+    padding: 12px;
+  }
 }
 
 .nav-wrapper {
@@ -71,10 +76,61 @@ header {
   align-items: center;
   gap: 40px;
 }
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+}
 
 .nav-list a {
   text-decoration: none;
   color: #212529;
+}
+
+.nav-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nav-list-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav-list-mobile {
+    display: flex;
+    width: 100%;
+    height: 48px;
+  }
+}
+
+.nav-list-mobile li {
+  flex: 1;
+  height: 100%;
+}
+
+.nav-list-mobile .products-mobile,
+.nav-list-mobile .brand-story-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #212529;
+}
+
+.nav-list-mobile .products-mobile {
+  background-color: #E8FEC5;
+}
+
+.nav-list-mobile .brand-story-mobile {
+  background-color: #F5FEE7;
 }
 
 .banner-wrapper {
@@ -88,9 +144,21 @@ header {
   justify-content: flex-start;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .banner-wrapper {
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-sm.png");
+    height: 480px;
+  }
+}
 
 .banner-content {
   padding: 16px clamp(24px, 10.4%, 200px);
+}
+@media (max-width: 768px) {
+  .banner-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .banner-content h1 {
@@ -130,6 +198,11 @@ header {
 .new-arrival {
   padding: 64px clamp(24px, 16.25%, 312px);
 }
+@media (max-width: 768px) {
+  .new-arrival {
+    padding: 40px 12px;
+  }
+}
 
 .new-arrival-title {
   display: flex;
@@ -144,11 +217,22 @@ header {
   color: #212529;
   margin-bottom: 12px;
 }
+@media (max-width: 768px) {
+  .new-arrival-title h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
 
 .new-arrival-title h3 {
   font-size: 32px;
   font-weight: bold;
   color: #212529;
+}
+@media (max-width: 768px) {
+  .new-arrival-title h3 {
+    font-size: 24px;
+  }
 }
 
 .new-arrival-list {
@@ -181,6 +265,11 @@ header {
   color: #212529;
   margin-bottom: 4px;
 }
+@media (max-width: 768px) {
+  .new-arrival-item h4 {
+    font-size: 16px;
+  }
+}
 
 .new-arrival-item p {
   font-size: 16px;
@@ -190,12 +279,22 @@ header {
 .best-seller-list {
   padding: 64px clamp(24px, 16.25%, 312px);
 }
+@media (max-width: 768px) {
+  .best-seller-list {
+    padding: 40px 12px;
+  }
+}
 
 .best-seller-list h3 {
   font-size: 32px;
   font-weight: bold;
   color: #212529;
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .best-seller-list h3 {
+    font-size: 24px;
+  }
 }
 
 .best-seller-list ul {
@@ -204,10 +303,25 @@ header {
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 768px) {
+  .best-seller-list ul {
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+}
 
 .best-seller-list li {
   position: relative;
   display: inline-block;
+}
+@media (max-width: 768px) {
+  .best-seller-list li {
+    flex: 0 0 70%;
+    scroll-snap-align: start;
+  }
 }
 
 .best-seller-note {
@@ -224,9 +338,13 @@ header {
   max-width: 422px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .best-seller-list img {
+    max-width: 300px;
+  }
+}
 
 .sale-wrapper {
-  max-height: 470px;
   width: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -237,15 +355,32 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .sale-wrapper {
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded-sm.png");
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 64px 12px;
+  }
 }
 
 .sale-content {
+  width: 634px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
   margin-bottom: 100px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .sale-content {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .sale-title {
@@ -254,6 +389,11 @@ header {
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 768px) {
+  .sale-title {
+    flex-direction: column;
+  }
+}
 
 .sale-title h2 {
   font-size: 48px;
@@ -261,11 +401,21 @@ header {
   color: #FFFFFF;
   letter-spacing: 5%;
 }
+@media (max-width: 768px) {
+  .sale-title h2 {
+    font-size: 32px;
+  }
+}
 
 .sale-title span {
   font-size: 40px;
   font-weight: bold;
   color: #C0FA73;
+}
+@media (max-width: 768px) {
+  .sale-title span {
+    font-size: 28px;
+  }
 }
 
 .sale-content h3 {
@@ -275,11 +425,36 @@ header {
   letter-spacing: 5%;
   margin-top: 16px;
 }
+@media (max-width: 768px) {
+  .sale-content h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
 
 .sale-content p {
   font-size: 20px;
   color: #ADB5BD;
   margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .sale-content p {
+    display: none;
+    margin-top: 0px;
+  }
+}
+
+.sale-content .sale-content-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sale-content .sale-content-mobile {
+    display: flex;
+    text-align: center;
+    margin-top: 4px;
+    letter-spacing: 5%;
+    line-height: 1.6;
+  }
 }
 
 .sale-content a {
@@ -296,16 +471,44 @@ header {
   font-size: 16px;
 }
 
-/* .sale-content .star {
-    position: absolute;
-    top: -56px;
-    left: -24px;
-} */
+.sale-content .img-star {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: -56px;
+  top: -32px;
+}
+@media (max-width: 768px) {
+  .sale-content .img-star {
+    left: -32px;
+    top: -32px;
+  }
+}
+
+.sale-content .img-sparkle {
+  width: 76px;
+  height: 64px;
+  position: absolute;
+  right: -38px;
+  bottom: 32px;
+}
+@media (max-width: 768px) {
+  .sale-content .img-sparkle {
+    right: -38px;
+    bottom: 40px;
+  }
+}
+
 .sale-wrapper .dots {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+@media (max-width: 768px) {
+  .sale-wrapper .dots {
+    display: none;
+  }
 }
 
 .sale-wrapper .dots li {

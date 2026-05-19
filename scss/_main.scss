@@ -1,3 +1,4 @@
+@use "mixin" as *;
 .banner-wrapper {
     height: 800px;
     width: 100%;
@@ -8,9 +9,17 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @include pad {
+		background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-sm.png");
+        height: 480px;
+    };
 }
 .banner-content {
     padding: 16px clamp(24px, 10.4%, 200px);
+    @include pad {
+		padding-left: 24px;
+        padding-right: 24px;
+    };
 }
 .banner-content h1 {
     font-size: 64px;
@@ -44,6 +53,9 @@
 }
 .new-arrival {
     padding: 64px clamp(24px, 16.25%, 312px);
+    @include pad {
+		padding: 40px 12px;
+    };
 }
 .new-arrival-title {
     display: flex;
@@ -56,11 +68,18 @@
     font-weight: bold;
     color: #212529;
     margin-bottom: 12px;
+    @include pad {
+		font-size: 32px;
+        margin-bottom: 8px;
+    };
 }
 .new-arrival-title h3 {
     font-size: 32px;
     font-weight: bold;
     color: #212529;
+    @include pad {
+		font-size: 24px;
+    };
 }
 .new-arrival-list {
     display: grid;
@@ -87,6 +106,9 @@
     font-weight: bold;
     color: #212529;
     margin-bottom: 4px;
+    @include pad {
+		font-size: 16px;
+    };
 }
 .new-arrival-item p {
     font-size: 16px;
@@ -94,22 +116,39 @@
 }
 .best-seller-list {
     padding: 64px clamp(24px, 16.25%, 312px);
+    @include pad {
+		padding: 40px 12px;
+    };
 }
 .best-seller-list h3 {
     font-size: 32px;
     font-weight: bold;
     color: #212529;
     margin-bottom: 16px;
+    @include pad {
+		font-size: 24px;
+    };
 }
 .best-seller-list ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
+    @include pad {
+        justify-content: flex-start;
+        gap: 16px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
 }
 .best-seller-list li {
     position: relative;
     display: inline-block;
+    @include pad {
+        flex: 0 0 70%;
+        scroll-snap-align: start;
+    }
 }
 .best-seller-note {
     position: absolute;
@@ -123,9 +162,11 @@
 .best-seller-list img {
     max-width: 422px;
     width: 100%;
+    @include pad {
+        max-width: 300px;
+    }
 }
 .sale-wrapper {
-    max-height: 470px;
     width: 100%;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -136,31 +177,53 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    @include pad {
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded-sm.png");
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding: 64px 12px;
+    }
 }
 .sale-content {
+    width: 634px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    position: relative;
+    @include pad {
+        margin: 0;
+        width: 100%;
+    }
 }
 .sale-title {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
+    @include pad {
+        flex-direction: column;
+    }
 }
 .sale-title h2 {
     font-size: 48px;
     font-weight: bold;
     color: #FFFFFF;
     letter-spacing: 5%;
+    @include pad {
+        font-size: 32px;
+    }
 }
 .sale-title span {
     font-size: 40px;
     font-weight: bold;
     color: #C0FA73;
+    @include pad {
+        font-size: 28px;
+    }
 }
 .sale-content h3 {
     font-size: 32px;
@@ -168,11 +231,29 @@
     color: #FFFFFF;
     letter-spacing: 5%;
     margin-top: 16px;
+    @include pad {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
 }
 .sale-content p {
     font-size: 20px;
     color: #ADB5BD;
     margin-top: 32px;
+    @include pad {
+        display: none;
+        margin-top: 0px;
+    }
+}
+.sale-content .sale-content-mobile {
+    display: none;
+    @include pad {
+        display: flex;
+        text-align: center;
+        margin-top: 4px;
+        letter-spacing: 5%;
+        line-height: 1.6;
+    }
 }
 .sale-content a {
     height: 48px;
@@ -187,16 +268,36 @@
     margin-top: 48px;
     font-size: 16px;
 }
-/* .sale-content .star {
+.sale-content .img-star {
+    width: 48px;
+    height: 48px;
     position: absolute;
-    top: -56px;
-    left: -24px;
-} */
+    left: -56px;
+    top: -32px;
+    @include pad {
+        left: -32px;
+        top: -32px;
+    }
+}
+.sale-content .img-sparkle {
+    width: 76px;
+    height: 64px;
+    position: absolute;
+    right: -38px;
+    bottom: 32px;
+    @include pad {
+        right: -38px;
+        bottom: 40px;
+    }
+}
 .sale-wrapper .dots {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
+    @include pad {
+        display: none;
+    }
 }
 .sale-wrapper .dots li {
     display: block;
