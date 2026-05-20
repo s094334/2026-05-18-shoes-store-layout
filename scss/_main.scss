@@ -1,0 +1,395 @@
+@use "mixin" as *;
+@use "variables" as *;
+.banner-wrapper {
+    height: 800px;
+    width: 100%;
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include pad {
+		background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-sm.png");
+        height: 480px;
+    };
+}
+.banner-content {
+    padding: 16px clamp(24px, 10.4%, 200px);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    @include pad {
+        padding: 0;
+		padding-left: 24px;
+        padding-right: 24px;
+    };
+}
+.banner-content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 5%;
+    margin-bottom: 16px;
+    @include pad {
+        font-size: $font-l;
+    };
+}
+.banner-content p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 5%;
+    @include pad {
+        font-size: 20px;
+    };
+}
+.new-arrival {
+    padding: 64px clamp(24px, 16.25%, 312px);
+    @include pad {
+		padding: 40px 12px;
+    };
+}
+.new-arrival-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.new-arrival-title h2 {
+    font-size: $font-l;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 12px;
+    @include pad {
+		font-size: $font-m;
+        margin-bottom: 8px;
+    };
+}
+.new-arrival-title h3 {
+    font-size: $font-m;
+    font-weight: bold;
+    color: #212529;
+    @include pad {
+		font-size: $font-s;
+    };
+}
+.new-arrival-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+}
+.new-arrival-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+.new-arrival-item a {
+    text-decoration: none;
+}
+.new-arrival-item img {
+    max-height: 636px;
+    max-width: 636px;
+    width: 100%;
+}
+.best-seller-list, .series-list {
+    padding: 64px clamp(24px, 16.25%, 312px);
+    @include pad {
+		padding: 40px 12px;
+    };
+}
+.best-seller-list h3, .series-list h3 {
+    font-size: $font-m;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 16px;
+    @include pad {
+		font-size: $font-s;
+    };
+}
+.best-seller-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    @include pad {
+        justify-content: flex-start;
+        gap: 16px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+}
+.best-seller-list li {
+    position: relative;
+    display: inline-block;
+    @include pad {
+        flex: 0 0 70%;
+        scroll-snap-align: start;
+    }
+}
+.best-seller-note {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #F5FEE7;
+    color: #57A203;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+.best-seller-list img {
+    max-width: 422px;
+    width: 100%;
+    @include pad {
+        max-width: 300px;
+    }
+}
+.sale-wrapper {
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include pad {
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-co-branded-sm.png");
+        overflow-x: hidden;
+        padding: 64px 12px;
+    }
+}
+.sale-content {
+    width: 634px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    @include pad {
+        margin: 0;
+        width: 100%;
+    }
+}
+.sale-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    @include pad {
+        flex-direction: column;
+    }
+}
+.sale-title h2 {
+    font-size: $font-l;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 5%;
+    @include pad {
+        font-size: $font-m;
+    }
+}
+.sale-title span {
+    font-size: 40px;
+    font-weight: bold;
+    color: #C0FA73;
+    @include pad {
+        font-size: 28px;
+    }
+}
+.sale-content h3 {
+    font-size: $font-m;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 5%;
+    margin-top: 16px;
+    @include pad {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+}
+.sale-content p {
+    font-size: 20px;
+    color: #ADB5BD;
+    margin-top: 32px;
+    @include pad {
+        display: none;
+        margin-top: 0px;
+    }
+}
+.sale-content .sale-content-mobile {
+    display: none;
+    @include pad {
+        display: flex;
+        text-align: center;
+        margin-top: 4px;
+        letter-spacing: 5%;
+        line-height: 1.6;
+    }
+}
+.sale-content a {
+    margin-top: 48px;
+}
+.sale-content .img-star {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: -56px;
+    top: -32px;
+    @include pad {
+        left: -32px;
+        top: -32px;
+    }
+}
+.sale-content .img-sparkle {
+    width: 76px;
+    height: 64px;
+    position: absolute;
+    right: -38px;
+    bottom: 32px;
+    @include pad {
+        right: -38px;
+        bottom: 40px;
+    }
+}
+.sale-wrapper .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    @include pad {
+        display: none;
+    }
+}
+.sale-wrapper .dots li {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #CED4DA;
+}
+.sale-wrapper .dots li.active {
+    background-color: #6C757D;
+    width: 24px;
+    border-radius: 4px;
+}
+.series-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    @include pad {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+.series-list li {
+    position: relative;
+    display: inline-block;
+}
+.series-list img {
+    max-width: 306px;
+    width: 100%;
+    @include pad {
+        max-width: 300px;
+    }
+}
+.series-note {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.series-note h4 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 8px;
+    @include pad {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+}
+.series-note p {
+    font-size: $font-s;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    @include pad {
+        font-size: 16px
+    }
+}
+.style-inspiration {
+    padding: 64px clamp(24px, 16.25%, 312px);
+    @include pad {
+		padding: 40px 12px;
+    };
+}
+.style-inspiration h3 {
+    font-size: $font-m;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 16px;
+    @include pad {
+		font-size: $font-s;
+    };
+}
+.style-inspiration-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 8px;
+    @include pad {
+        display: flex;
+        justify-content: flex-start;
+        gap: 16px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+}
+.style-inspiration-list div {
+    @include pad {
+        flex: 0 0 70%;
+        scroll-snap-align: start;
+    }
+}
+.style-inspiration-list img {
+    width: 100%;
+    display: block;
+}
+.inspiration-item-bg-man {
+    grid-row: 2/4;
+    grid-column: 1/3;
+}
+.inspiration-item-r2-c3 {
+    grid-row: 2;
+    grid-column: 3;
+}
+.inspiration-item-r2-c4 {
+    grid-row: 2;
+    grid-column: 4;
+}
+.inspiration-item-r3-c3 {
+    grid-row: 3;
+    grid-column: 3;
+}
+.inspiration-item-r3-c4 {
+    grid-row: 3;
+    grid-column: 4;
+}
+.inspiration-item-bg-woman {
+    grid-row: 1/3;
+    grid-column: 5/7;
+}

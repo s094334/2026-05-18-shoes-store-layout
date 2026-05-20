@@ -1,0 +1,69 @@
+@use "mixin" as *;
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+header .nav-web {
+    padding: 16px clamp(24px, 16.25%, 312px);
+    display: flex;
+    justify-content: space-between;
+    @include pad {
+		padding: 12px;
+    }
+}
+header .nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+header .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    @include pad {
+		display: none;
+    }
+}
+header .nav-list a {
+    text-decoration: none;
+    color: #212529;
+}
+header .nav-mobile {
+    display: none;
+    @include pad {
+		display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+header .nav-list-mobile {
+    display: none;
+    @include pad {
+		display: flex;
+        width: 100%;
+        height: 48px;
+    }
+}
+header .nav-list-mobile li {
+    flex: 1;
+    height: 100%;
+}
+header .nav-list-mobile .products-mobile,
+header .nav-list-mobile .brand-story-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #212529;
+}
+
+header .nav-list-mobile .products-mobile {
+    background-color: #E8FEC5;
+}
+
+header .nav-list-mobile .brand-story-mobile {
+    background-color: #F5FEE7;
+}
