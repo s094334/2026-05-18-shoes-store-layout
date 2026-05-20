@@ -29,6 +29,9 @@ header .nav-list a {
     text-decoration: none;
     color: #212529;
 }
+header .nav-list a.active {
+    font-weight: bold;
+}
 header .nav-mobile {
     display: none;
     @include pad {
