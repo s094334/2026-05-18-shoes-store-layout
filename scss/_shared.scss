@@ -1,0 +1,56 @@
+@use "mixin" as *;
+@use "variables" as *;
+.product-price h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 4px;
+    @include pad {
+		font-size: 16px;
+    };
+}
+.product-price p {
+    font-size: 16px;
+    color: #212529;
+}
+.cta-button {
+    height: 48px;
+    width: 115px;
+    text-decoration: none;
+    background-color: #C0FA73;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+.call-to-action-content {
+    margin-top: 48px;
+    background-color: #E8FEC5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.call-to-action-content p {
+    font-size: $font-s;
+    font-weight: bold;
+    margin-top: 33.5px;
+    margin-bottom: 33.5px;
+    @include pad {
+        font-size: 20px;
+    }
+}
+.call-to-action-content a {
+    height: 48px;
+    width: 115px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #212529;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}

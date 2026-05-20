@@ -48,6 +48,70 @@ table {
   border-spacing: 0;
 }
 
+.product-price h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 4px;
+}
+@media (max-width: 768px) {
+  .product-price h4 {
+    font-size: 16px;
+  }
+}
+
+.product-price p {
+  font-size: 16px;
+  color: #212529;
+}
+
+.cta-button {
+  height: 48px;
+  width: 115px;
+  text-decoration: none;
+  background-color: #C0FA73;
+  color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.call-to-action-content {
+  margin-top: 48px;
+  background-color: #E8FEC5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.call-to-action-content p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 33.5px;
+  margin-bottom: 33.5px;
+}
+@media (max-width: 768px) {
+  .call-to-action-content p {
+    font-size: 20px;
+  }
+}
+
+.call-to-action-content a {
+  height: 48px;
+  width: 115px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #212529;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -190,19 +254,6 @@ header .nav-list-mobile .brand-story-mobile {
   }
 }
 
-.banner-content a {
-  height: 48px;
-  width: 115px;
-  cursor: pointer;
-  text-decoration: none;
-  background-color: #C0FA73;
-  color: #212529;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-}
-
 .new-arrival {
   padding: 64px clamp(24px, 16.25%, 312px);
 }
@@ -265,23 +316,6 @@ header .nav-list-mobile .brand-story-mobile {
   max-height: 636px;
   max-width: 636px;
   width: 100%;
-}
-
-.new-arrival-item h4 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #212529;
-  margin-bottom: 4px;
-}
-@media (max-width: 768px) {
-  .new-arrival-item h4 {
-    font-size: 16px;
-  }
-}
-
-.new-arrival-item p {
-  font-size: 16px;
-  color: #212529;
 }
 
 .best-seller-list, .series-list {
@@ -465,17 +499,7 @@ header .nav-list-mobile .brand-story-mobile {
 }
 
 .sale-content a {
-  height: 48px;
-  width: 115px;
-  text-decoration: none;
-  background-color: #C0FA73;
-  color: #212529;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
   margin-top: 48px;
-  font-size: 16px;
 }
 
 .sale-content .img-star {
@@ -673,41 +697,6 @@ header .nav-list-mobile .brand-story-mobile {
 .inspiration-item-bg-woman {
   grid-row: 1/3;
   grid-column: 5/7;
-}
-
-.call-to-action-content {
-  margin-top: 48px;
-  background-color: #E8FEC5;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-
-.call-to-action-content p {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 33.5px;
-  margin-bottom: 33.5px;
-}
-@media (max-width: 768px) {
-  .call-to-action-content p {
-    font-size: 20px;
-  }
-}
-
-.call-to-action-content a {
-  height: 48px;
-  width: 115px;
-  cursor: pointer;
-  text-decoration: none;
-  background-color: #212529;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
 }
 
 footer {
