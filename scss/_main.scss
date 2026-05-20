@@ -94,6 +94,7 @@
     max-height: 636px;
     max-width: 636px;
     width: 100%;
+    margin-bottom: 12px;
 }
 .best-seller-list, .series-list {
     padding: 64px clamp(24px, 16.25%, 312px);
@@ -110,7 +111,7 @@
 		font-size: $font-s;
     };
 }
-.best-seller-list ul {
+.best-seller-list-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,11 +124,11 @@
         scrollbar-width: none;
     }
 }
-.best-seller-list li {
+.best-seller-list-item {
     position: relative;
     display: inline-block;
     @include pad {
-        flex: 0 0 70%;
+        flex: 0 0 85%;
         scroll-snap-align: start;
     }
 }
@@ -144,7 +145,7 @@
     max-width: 422px;
     width: 100%;
     @include pad {
-        max-width: 300px;
+        max-width: 100%;
     }
 }
 .sale-wrapper {
@@ -295,12 +296,15 @@
 .series-list li {
     position: relative;
     display: inline-block;
+    @include pad {
+        width: fit-content;  /* 加這行，讓 li 緊貼圖片寬度 */
+    }
 }
 .series-list img {
     max-width: 306px;
     width: 100%;
     @include pad {
-        max-width: 300px;
+        max-width: 100%;
     }
 }
 .series-note {
@@ -318,7 +322,6 @@
     margin-bottom: 8px;
     @include pad {
         font-size: 16px;
-        margin-bottom: 0;
     }
 }
 .series-note p {
