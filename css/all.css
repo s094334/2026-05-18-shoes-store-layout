@@ -48,6 +48,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
 .product-price h4 {
   font-size: 20px;
   font-weight: bold;
@@ -109,7 +113,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 *, *::before, *::after {
@@ -700,11 +704,14 @@ header .nav-list-mobile .brand-story-mobile {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 64px clamp(24px, 16.25%, 312px);
 }
 @media (max-width: 768px) {
   footer {
-    padding: 40px 12px;
+    padding: 32px 12px;
   }
 }
 
@@ -718,6 +725,7 @@ footer .nav-wrapper {
   footer .nav-wrapper {
     flex-direction: column;
     gap: 8px;
+    align-items: flex-start;
   }
 }
 
@@ -730,9 +738,14 @@ footer .nav-list {
 @media (max-width: 768px) {
   footer .nav-list {
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 4px;
+    padding-left: 12px;
   }
+}
+
+footer .nav-list li {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 footer .nav-list a {
@@ -745,6 +758,7 @@ footer .copyright {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #DEE2E6;
 }
 
 footer .copyright::before {

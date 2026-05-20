@@ -1,5 +1,8 @@
 @use "mixin" as *;
 @use "variables" as *;
+body {
+    font-family: $font-family;
+}
 .product-price h4 {
     font-size: 20px;
     font-weight: bold;
@@ -52,5 +55,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3px;
+    border-radius: 4px;
 }

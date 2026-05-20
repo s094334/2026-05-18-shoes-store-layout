@@ -1,8 +1,11 @@
 @use "mixin" as *;
 footer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     padding: 64px clamp(24px, 16.25%, 312px);
     @include pad {
-		padding: 40px 12px;
+		padding: 32px 12px;
     };
 }
 footer .nav-wrapper {
@@ -13,6 +16,7 @@ footer .nav-wrapper {
     @include pad {
 		flex-direction: column;
         gap: 8px;
+        align-items: flex-start;
     }
 }
 footer .nav-list {
@@ -22,9 +26,13 @@ footer .nav-list {
     gap: 40px;
     @include pad {
 		flex-direction: column;
-        gap: 16px;
-        margin-bottom: 24px;
+        gap: 4px;
+        padding-left: 12px;
     }
+}
+footer .nav-list li {
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 footer .nav-list a {
     text-decoration: none;
@@ -35,6 +43,7 @@ footer .copyright {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid #DEE2E6;
 }
 footer .copyright::before {
 	display: none;
