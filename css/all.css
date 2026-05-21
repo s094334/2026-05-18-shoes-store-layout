@@ -819,6 +819,8 @@ footer .copyright p {
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   max-width: 746px;
+  width: 100%;
+  align-self: start;
 }
 @media (max-width: 768px) {
   .info-image-list {
@@ -828,7 +830,6 @@ footer .copyright p {
 
 .info-image-item img {
   max-width: 369px;
-  max-height: 369px;
   width: 100%;
 }
 

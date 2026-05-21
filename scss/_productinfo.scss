@@ -30,13 +30,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     max-width: 746px;
+    width: 100%;
+    align-self: start;
     @include pad {
         display: none;
     }
 }
 .info-image-item img {
     max-width: 369px;
-    max-height: 369px;
     width: 100%;
 }
 .breadcrumb-content li {
