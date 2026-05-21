@@ -1,18 +1,38 @@
 @use "mixin" as *;
 @use "variables" as *;
+#product-info header .nav-mobile {
+    @include pad {
+        display: none;
+    }
+}
 .info {
     padding: 64px clamp(24px, 10.4%, 200px);
     display: flex;
     gap: 24px;
     @include pad {
-        padding: 16px 12px;
+        padding: 24px 12px;
+        flex-direction: column;
     };
+}
+.info-image-mobile {
+    display: none;
+    @include pad {
+        display: flex;
+    }
+}
+.info-image-mobile img {
+    @include pad {
+        width: 100%;
+    }
 }
 .info-image-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     max-width: 746px;
+    @include pad {
+        display: none;
+    }
 }
 .info-image-item img {
     max-width: 369px;
@@ -23,6 +43,9 @@
     display: inline;
     font-size: 16px;
     color: #212529;
+    @include pad {
+        font-size: 14px;
+    };
 }
 .breadcrumb-content li+li:before {
     padding: 12px;
@@ -36,7 +59,6 @@
 .breadcrumb-content li a:hover {
     text-decoration: underline;
 }
-/* 右側 */
 .info-details, .info-details-spec {
     display: flex;
     flex-direction: column;
@@ -52,6 +74,9 @@
     font-weight: bold;
     letter-spacing: 5%;
     line-height: 150%;
+    @include pad {
+        font-size: 24px;
+    };
 }
 .info-details-price {
     display: flex;
@@ -65,6 +90,9 @@
     font-weight: bold;
     letter-spacing: 5%;
     color: #57A203;
+    @include pad {
+        font-size: 16px;
+    };
 }
 .info-details-price h3 {
     font-size: 14px;
@@ -77,6 +105,9 @@
     flex-direction: column;
     gap: 12px;
     max-width: 526px;
+    @include pad {
+        width: 100%;
+    }
 }
 .info-details-content p, .info-details-spec h4, 
 .info-details-spec-item h5, .info-details-content-item h4 {
@@ -120,11 +151,15 @@
     display: grid;
     grid-template-columns: repeat(3, fit-content(100%));
     gap: 8px;
+    @include pad {
+        grid-template-columns: repeat(2, fit-content(100%));
+    }
 }
 .info-details-spec-size-list input {
     color: #212529;
     background-color: #FFFFFF;
     max-width: 160px;
+    width: 100%;
     border-radius: 4px;
     padding: 12px 24px;
     border: 1px #DEE2E6 solid;
@@ -152,6 +187,11 @@
     display: flex;
     gap: 8px;
     margin-top: 16px;
+    @include pad {
+        flex-direction: row-reverse;
+        margin: 0;
+        justify-content: flex-end;
+    }
 }
 .info-details-spec-cta button {
     max-width: 259px;
@@ -167,6 +207,10 @@
     border-radius: 4px;
     &:hover {
         font-weight: bold;
+    };
+    @include pad {
+        flex-direction: row-reverse;
+        max-width: 48px;
     }
 }
 .fav-btn img {
@@ -179,6 +223,9 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 5%;
+    @include pad {
+        display: none;
+    }
 }
 .info-details-spec-cta a {
     max-width: 259px;
@@ -196,6 +243,9 @@
     color: #FFFFFF;
     &:hover {
         font-weight: bold;
+    };
+    @include pad {
+        max-width: 295px;
     }
 }
 .info-details-notice-item {
@@ -231,11 +281,22 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    @include pad {
+        justify-content: flex-start;
+        gap: 16px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
 }
 .recommended-item {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    @include pad {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
+    }
 }
 .recommended-item h4, .recommended-item p {
     font-size: 16px;
@@ -246,4 +307,8 @@
     max-width: 306px;
     max-height: 306px;
     width: 100%;
+    @include pad {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
