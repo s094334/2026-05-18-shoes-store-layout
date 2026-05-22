@@ -368,11 +368,13 @@ header .nav-list-mobile .brand-story-mobile {
 .best-seller-list-item {
   position: relative;
   display: inline-block;
+  max-width: 422px;
 }
 @media (max-width: 768px) {
   .best-seller-list-item {
     flex: 0 0 85%;
     scroll-snap-align: start;
+    max-width: 300px;
   }
 }
 
@@ -387,13 +389,7 @@ header .nav-list-mobile .brand-story-mobile {
 }
 
 .best-seller-list img {
-  max-width: 422px;
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .best-seller-list img {
-    max-width: 100%;
-  }
+  max-width: 100%;
 }
 
 .sale-wrapper {
@@ -451,6 +447,8 @@ header .nav-list-mobile .brand-story-mobile {
   font-weight: bold;
   color: #FFFFFF;
   letter-spacing: 5%;
+  line-height: 120%;
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
   .sale-title h2 {
@@ -504,7 +502,7 @@ header .nav-list-mobile .brand-story-mobile {
     text-align: center;
     margin-top: 4px;
     letter-spacing: 5%;
-    line-height: 1.6;
+    line-height: 120%;
   }
 }
 
@@ -773,14 +771,14 @@ footer .copyright {
 }
 
 footer .copyright h4 {
-  line-height: 1.6;
+  line-height: 150%;
   color: #6C757D;
   text-align: center;
   margin-top: 32px;
 }
 
 footer .copyright p {
-  line-height: 1.6;
+  line-height: 150%;
   color: #6C757D;
   text-align: center;
 }
