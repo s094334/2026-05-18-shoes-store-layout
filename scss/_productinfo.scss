@@ -300,10 +300,9 @@
 }
 .recommended-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 24px;
     @include pad {
-        justify-content: flex-start;
         gap: 16px;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
@@ -314,6 +313,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    text-decoration: none;
     @include pad {
         flex: 0 0 85%;
         scroll-snap-align: start;

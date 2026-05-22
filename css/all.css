@@ -1152,12 +1152,11 @@ footer .copyright p {
 
 .recommended-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 24px;
 }
 @media (max-width: 768px) {
   .recommended-list {
-    justify-content: flex-start;
     gap: 16px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -1169,6 +1168,7 @@ footer .copyright p {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .recommended-item {
