@@ -837,6 +837,9 @@ footer .copyright p {
   display: inline;
   font-size: 16px;
   color: #212529;
+  line-height: 150%;
+  letter-spacing: 5%;
+  font-weight: 500;
 }
 @media (max-width: 768px) {
   .breadcrumb-content li {
@@ -848,6 +851,8 @@ footer .copyright p {
   padding: 12px;
   color: #6C757D;
   content: "/ ";
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .breadcrumb-content li a {
@@ -982,28 +987,37 @@ footer .copyright p {
   }
 }
 
-.info-details-spec-size-list input {
+.info-details-spec-size-list input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.info-details-spec-size-list input[type=radio] + label {
   color: #212529;
   background-color: #FFFFFF;
   max-width: 160px;
   width: 100%;
   border-radius: 4px;
   padding: 12px 24px;
-  border: 1px #DEE2E6 solid;
+  border: 1px solid #DEE2E6;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 5%;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.info-details-spec-size-list input.active {
-  border: 1px #212529 solid;
+.info-details-spec-size-list input[type=radio] + label:hover {
+  border: 1px solid #6C757D;
 }
 
-.info-details-spec-size-list input:hover {
-  border: 1px #6C757D solid;
+.info-details-spec-size-list input[type=radio]:checked + label {
+  border: 1px solid #212529;
 }
 
-.info-details-spec-size-list .sold-out {
+.info-details-spec-size-list input[type=radio] + label.sold-out {
   opacity: 0.4;
   cursor: not-allowed;
 }
