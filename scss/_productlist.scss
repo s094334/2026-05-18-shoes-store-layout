@@ -123,6 +123,9 @@
 }
 .pagination-item a.active {
     background-color: #C0FA73;
+    &:hover {
+        background-color: #C0FA73;
+    }
 }
 .pagination-item a:hover {
     background-color: #F8F9FA;
