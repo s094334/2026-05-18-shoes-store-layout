@@ -6,7 +6,7 @@
     }
 }
 .info {
-    padding: 64px clamp(24px, 10.4%, 200px);
+    padding: 64px clamp(24px, 16.25%, 312px);
     display: flex;
     gap: 24px;
     @include pad {
@@ -134,7 +134,12 @@
     text-decoration: none;
 }
 .info-details-spec-item:hover {
-    text-decoration: underline #6C757D;
+    img {
+        border: 1px solid #212529
+    }
+    h5 {
+        color: #212529;
+    }
 }
 .info-details-spec-item img {
     width: 64px;
@@ -194,7 +199,7 @@
         justify-content: flex-end;
     }
 }
-.info-details-spec-cta button {
+.info-details-spec-cta .fav-btn {
     max-width: 259px;
     width: 100%;
     padding-top: 12px;
@@ -208,16 +213,31 @@
     border-radius: 4px;
     &:hover {
         font-weight: bold;
+        background-color: #212529;
+        color: #FFFFFF;
+        @include pad {
+            background-color: #FFFFFF;
+            color: #212529;
+        }
     };
     @include pad {
         flex-direction: row-reverse;
         max-width: 48px;
+        border: none;
     }
 }
 .fav-btn img {
     content: url("../assets/heart.svg");
+    width: 20px;
+    height: 20px;
 }
 .fav-btn:hover img {
+    content: url("../assets/heart-white.svg");
+    @include pad {
+        content: url("../assets/heart-fill.svg");
+    }
+}
+.fav-btn.active img {
     content: url("../assets/heart-fill.svg");
 }
 .fav-btn span {
@@ -264,7 +284,7 @@
     letter-spacing: 5%;
 }
 .recommend {
-    padding: 48px clamp(24px, 10.4%, 200px);
+    padding: 48px clamp(24px, 16.25%, 312px);
     display: flex;
     flex-direction: column;
     gap: 16px;

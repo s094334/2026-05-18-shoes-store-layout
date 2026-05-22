@@ -788,7 +788,7 @@ footer .copyright p {
 }
 
 .info {
-  padding: 64px clamp(24px, 10.4%, 200px);
+  padding: 64px clamp(24px, 16.25%, 312px);
   display: flex;
   gap: 24px;
 }
@@ -949,9 +949,11 @@ footer .copyright p {
   text-decoration: none;
 }
 
-.info-details-spec-item:hover {
-  -webkit-text-decoration: underline #6C757D;
-          text-decoration: underline #6C757D;
+.info-details-spec-item:hover img {
+  border: 1px solid #212529;
+}
+.info-details-spec-item:hover h5 {
+  color: #212529;
 }
 
 .info-details-spec-item img {
@@ -1026,7 +1028,7 @@ footer .copyright p {
   }
 }
 
-.info-details-spec-cta button {
+.info-details-spec-cta .fav-btn {
   max-width: 259px;
   width: 100%;
   padding-top: 12px;
@@ -1039,21 +1041,41 @@ footer .copyright p {
   border: 1px #212529 solid;
   border-radius: 4px;
 }
-.info-details-spec-cta button:hover {
+.info-details-spec-cta .fav-btn:hover {
   font-weight: bold;
+  background-color: #212529;
+  color: #FFFFFF;
 }
 @media (max-width: 768px) {
-  .info-details-spec-cta button {
+  .info-details-spec-cta .fav-btn:hover {
+    background-color: #FFFFFF;
+    color: #212529;
+  }
+}
+@media (max-width: 768px) {
+  .info-details-spec-cta .fav-btn {
     flex-direction: row-reverse;
     max-width: 48px;
+    border: none;
   }
 }
 
 .fav-btn img {
   content: url("../assets/heart.svg");
+  width: 20px;
+  height: 20px;
 }
 
 .fav-btn:hover img {
+  content: url("../assets/heart-white.svg");
+}
+@media (max-width: 768px) {
+  .fav-btn:hover img {
+    content: url("../assets/heart-fill.svg");
+  }
+}
+
+.fav-btn.active img {
   content: url("../assets/heart-fill.svg");
 }
 
@@ -1110,7 +1132,7 @@ footer .copyright p {
 }
 
 .recommend {
-  padding: 48px clamp(24px, 10.4%, 200px);
+  padding: 48px clamp(24px, 16.25%, 312px);
   display: flex;
   flex-direction: column;
   gap: 16px;
