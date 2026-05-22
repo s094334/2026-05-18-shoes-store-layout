@@ -127,9 +127,11 @@
 .best-seller-list-item {
     position: relative;
     display: inline-block;
+    max-width: 422px;
     @include pad {
         flex: 0 0 85%;
         scroll-snap-align: start;
+        max-width: 300px;
     }
 }
 .best-seller-note {
@@ -142,11 +144,7 @@
     padding: 8px 12px;
 }
 .best-seller-list img {
-    max-width: 422px;
-    width: 100%;
-    @include pad {
-        max-width: 100%;
-    }
+    max-width: 100%;
 }
 .sale-wrapper {
     width: 100%;
@@ -194,6 +192,8 @@
     font-weight: bold;
     color: #FFFFFF;
     letter-spacing: 5%;
+    line-height: 120%;
+    white-space: nowrap;
     @include pad {
         font-size: $font-m;
     }
@@ -233,7 +233,7 @@
         text-align: center;
         margin-top: 4px;
         letter-spacing: 5%;
-        line-height: 1.6;
+        line-height: 120%;
     }
 }
 .sale-content a {
