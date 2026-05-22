@@ -12,18 +12,27 @@
     }
 }
 .breadcrumb-content li {
+    color: #212529;
     display: inline;
     font-size: 16px;
-    color: #212529;
+    line-height: 150%;
+    letter-spacing: 5%;
+    font-weight: 500;
 }
 .breadcrumb-content li+li:before {
     padding: 12px;
     color: #6C757D;
     content: "/\00a0";
+    font-size: 16px;
+    font-weight: 700;
 }
 .breadcrumb-content li a {
     color: #6C757D;
     text-decoration: none;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 5%;
+    font-weight: 500;
 }
 .breadcrumb-content li a:hover {
     text-decoration: underline;
@@ -96,6 +105,15 @@
 }
 .women-shoes-item h4 {
     font-size: 16px;
+    line-height: 120%;
+    font-weight: 700;
+    letter-spacing: 5%;
+}
+.women-shoes-item p {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    letter-spacing: 5%;
 }
 .display-mobile {
     display: none;
